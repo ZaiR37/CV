@@ -1,12 +1,14 @@
 <template>
-	<template class="header">
-		<img src="../assets/Leaves_object.svg" alt="leaves">
-		<ul>
-			<li v-for="item in navList" :key="item">
-				<a v-bind:href="`#${item}`"> {{ item }}</a>
-			</li>
-		</ul>
-	</template>
+	<div class="header">
+		<div class="header-wrapper">
+			<img src="../assets/Leaves_object.svg" alt="leaves">
+			<ul>
+				<li v-for="item in navList" :key="item">
+					<a v-bind:href="`#${item}`"> {{ item }}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </template>
 
 <script setup>
@@ -15,8 +17,6 @@ const navList = ['About', 'Projects', 'Contact'];
 
 <style scoped>
 .header {
-	display: flex;
-	justify-content: space-between;
 	padding: 5px 10px 5px 10px;
 	background-color: hsla(0, 100%, 100%, 0.04);
 	box-shadow:
@@ -27,8 +27,14 @@ const navList = ['About', 'Projects', 'Contact'];
 	font-size: 1.1rem;
 }
 
+.header-wrapper{
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
 img {
-	margin-left: min(8vw, 100px);
 	filter: sepia(30%);
 	padding: 2px;
 	height: 4rem;
@@ -36,7 +42,6 @@ img {
 }
 
 ul {
-	margin-right: min(5vw, 60px);
 	display: flex;
 	justify-content: end;
 	list-style-type: none;
@@ -53,7 +58,7 @@ a {
 	text-decoration: none;
 }
 
-a:hover{
+a:hover {
 	color: rgb(155, 164, 175);
 }
 
