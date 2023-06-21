@@ -26,17 +26,20 @@
 
 <script setup>
 const navList = ['About', 'Projects', 'Contact'];
+
+const color = {
+	background: "#FFF2F2",
+	font: "#8699b1",
+	font_hover: "#9ba4af",
+	font_active: "#b1b3b4",
+};
 </script>
 
 <style scoped>
 .header {
 	height: 80px;
 	padding: 5px 10px 5px 10px;
-	background-color: hsla(0, 100%, 100%, 0.04);
-	box-shadow:
-		0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
-		0px 2px 1px -1px hsla(0, 0%, 0%, 0.12),
-		0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
+	background-color: v-bind('color.background');
 	font-weight: 500;
 	font-size: 1.1rem;
 }
@@ -74,18 +77,17 @@ li {
 	display: inline-block;
 }
 
-
 a {
-	color: rgb(133, 152, 177);
+	color: v-bind('color.font');
 	text-decoration: none;
 }
 
 a:hover {
-	color: rgb(155, 164, 175);
+	color: v-bind('color.font_hover');
 }
 
 a:active {
-	color: rgb(177, 179, 180);
+	color: v-bind('color.font_active');
 }
 
 
