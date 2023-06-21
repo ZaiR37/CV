@@ -1,9 +1,10 @@
 <script setup>
+import WebHeader from './components/WebHeader.vue'
 
 </script>
 
 <template>
-  <div>hallo</div>
+  <WebHeader></WebHeader>
 </template>
 
 <style scoped>
