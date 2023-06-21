@@ -30,6 +30,7 @@ const navList = ['About', 'Projects', 'Contact'];
 
 <style scoped>
 .header {
+	height: 80px;
 	padding: 5px 10px 5px 10px;
 	background-color: hsla(0, 100%, 100%, 0.04);
 	box-shadow:
@@ -40,7 +41,7 @@ const navList = ['About', 'Projects', 'Contact'];
 	font-size: 1.1rem;
 }
 
-.header-wrapper{
+.header-wrapper {
 	width: 90%;
 	margin: auto;
 	display: flex;
@@ -48,20 +49,28 @@ const navList = ['About', 'Projects', 'Contact'];
 }
 
 img {
+	position: relative;
+	top: -5px;
 	filter: sepia(30%);
 	padding: 2px;
-	height: 4rem;
+	padding-left: 3vw;
+	height: 5rem;
 	width: auto;
+	z-index: 2;
 }
 
 ul {
+	padding: 0;
 	display: flex;
 	justify-content: end;
 	list-style-type: none;
 }
 
 li {
-	padding: 0 10px 0 10px;
+	position: relative;
+	top: 8px;
+	padding: min(5%, 8px);
+	margin: auto;
 	display: inline-block;
 }
 
@@ -79,11 +88,22 @@ a:active {
 	color: rgb(177, 179, 180);
 }
 
+
+@media (max-width: 350px) {
+	img {
+		padding-left: 0;
+		left: -12px
+	}
+
+	li {
+		left: 16px;
+	}
+}
 .curve-bottom {
 	position: absolute;
 	top: 70px;
 	left: 0;
-	width: 100%;
+	width: 100dvw;
 	overflow: hidden;
 	line-height: 0;
 	transform: rotate(180deg);
@@ -92,6 +112,7 @@ a:active {
 .curve-bottom svg {
 	position: relative;
 	display: block;
-	width: calc(100% + 1.3px);
+	width: calc(100dvw + 1.3px);
 	height: 27px;
-}</style>
+}
+</style>
