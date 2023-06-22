@@ -1,7 +1,7 @@
 <template>
 	<div class="header">
 		<div class="header-wrapper">
-			<img src="../assets/Leaves_object.svg" alt="leaves">
+			<img src="../assets/Leaves_object.png" alt="leavesImage">
 			<ul>
 				<li v-for="item in navList" :key="item">
 					<a v-bind:href="`#${item}`"> {{ item }}</a>
@@ -75,32 +75,37 @@ li {
 	padding: min(5%, 8px);
 	margin: auto;
 	display: inline-block;
+
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 a {
 	color: v-bind('color.font');
 	text-decoration: none;
+
+	background:
+		linear-gradient(to left, rgba(100, 200, 200, 0.253), rgba(100, 200, 200, 0.61));
+	background-size: 0 0.1em, 100% 0.1em;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 400ms;
 }
 
-a:hover {
+a:hover,
+a:focus {
 	color: v-bind('color.font_hover');
+	background-size: 100% 0.1em, 0 0.1em;
 }
 
 a:active {
 	color: v-bind('color.font_active');
 }
 
-
-@media (max-width: 350px) {
-	img {
-		padding-left: 0;
-		left: -12px
-	}
-
-	li {
-		left: 16px;
-	}
-}
+/*---- CURVE BOTTOM ----*/
 .curve-bottom {
 	position: absolute;
 	top: 70px;
@@ -116,5 +121,16 @@ a:active {
 	display: block;
 	width: calc(100dvw + 1.3px);
 	height: 27px;
+}
+
+@media (max-width: 350px) {
+	img {
+		padding-left: 0;
+		left: -12px
+	}
+
+	li {
+		left: 16px;
+	}
 }
 </style>
