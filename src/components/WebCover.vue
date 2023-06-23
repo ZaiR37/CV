@@ -30,7 +30,7 @@
 const color = {
 	background: "#b2c1c2",
 	background_next: "#f3f3f3",
-	background_desc: "#7777774b",
+	background_desc: "#929e9fbe",
 	font_greet: "#647080",
 	font_name: "#647080",
 	font_desc: "#ddeaf8ea",
@@ -39,7 +39,7 @@ const color = {
 
 <style scoped>
 .cover {
-	background-color: v-bind('color.background');
+	background-color: v-bind('color.background') ;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	min-height: 460px;
@@ -72,21 +72,16 @@ const color = {
 }
 
 #name {
-	z-index: 1;
-	color: v-bind('color.font_name');
-	font-size: 3rem;
-	font-weight: 600;
-	user-select: none;
-}
-
-#name {
 	display: inline-block;
+
 	color: v-bind('color.font_name');
+	font-weight: 600;
+	font-size: 3rem;
 	text-transform: uppercase;
-	
+
 	background-image:
 		linear-gradient(-225deg,
-			#4d466691 0%,
+			#ffffff91 0%,
 			#5c7979a8 29%,
 			#c5eedea4 67%,
 			#fcfad3a2 100%);
@@ -94,8 +89,10 @@ const color = {
 	background-clip: border-box;
 	background-size: 200% auto;
 	background-clip: text;
-	animation: textclip 2s linear infinite;
+	animation: textclip 4s linear infinite;
 
+	z-index: 1;
+	user-select: none;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -154,6 +151,11 @@ const color = {
 	width: 260px;
 	opacity: 20%;
 	rotate: -20deg;
+	transition: rotate 100ms;
+}
+
+#handIcon:hover{
+	rotate: -35deg;
 }
 
 .img-wrapper img {
@@ -173,7 +175,7 @@ const color = {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 100dvw;
+	width: 100%;
 	overflow: hidden;
 	line-height: 0;
 	transform: rotate(180deg);

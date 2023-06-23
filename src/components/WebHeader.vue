@@ -28,7 +28,7 @@
 const navList = ['About', 'Projects', 'Contact'];
 
 const color = {
-	background: "#FFF2F2",
+	background: "#F6F1F1",
 	font: "#8699b1",
 	font_hover: "#9ba4af",
 	font_active: "#b1b3b4",
@@ -110,7 +110,7 @@ a:active {
 	position: absolute;
 	top: 70px;
 	left: 0;
-	width: 100dvw;
+	width: 100%;
 	overflow: hidden;
 	line-height: 0;
 	transform: rotate(180deg);
