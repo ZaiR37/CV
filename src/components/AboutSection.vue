@@ -5,9 +5,9 @@
 				<span id="title">ABOUT ME</span>
 			</div>
 			<div class="detail-container">
-				<span>Ever since I was a child, I've always been fascinated by how computers work. It's truly a dream come
+				<span>Ever since I was a child, I've always been fascinated by how computer works. It's truly a dream come
 					true to now pursue a career in programming, where I can channel my passion. When I'm not coding, I enjoy
-					playing instruments like the guitar and piano in my free time, and though I don't game as much as I did
+					playing instruments like guitar and piano in my free time, and though I don't game as much as I did
 					in high school, I still have fun playing with friends every now and then.
 				</span>
 			</div>
@@ -26,7 +26,9 @@
 			</div>
 		</div>
 		<div class="myLanguage-container">
-			<span>I'm fluent in both Indonesian and Sundanese, and I can also comfortably converse in English and Japanese.</span>
+			<div class="myLanguage-wrapper">
+				<span>I'm fluent in both Indonesian and Sundanese, and I can also comfortably converse in English and Japanese.</span>
+			</div>
 		</div>
 	</div>
 </template>
@@ -156,6 +158,11 @@ li {
 	padding-left: 50px;
 	margin: auto;
 	text-align: center;
+}
+
+.myLanguage-wrapper{
+	margin: auto;
+	width: min(100%, 600px);
 }
 
 @media (max-width:767px) {
