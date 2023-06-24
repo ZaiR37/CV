@@ -35,8 +35,8 @@
 
 <script setup>
 const mySkill = {
-	frontend: ['Vue', 'Laravel', 'Bootstrap'],
-	backend: ['Node', 'ExpressJs', 'Lumen', 'MySQL', 'MongoDB'],
+	frontend: ['Vue', 'Laravel', 'Vanilla Css','Bootstrap' ],
+	backend: ['Javascript', 'NodeJs', 'Express', 'Lumen', 'MySQL', 'MongoDB'],
 	tools: ['VSCode','Git', 'Docker', 'Figma'],
 }
 
