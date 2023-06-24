@@ -3,16 +3,16 @@
 		<div class="cover-wrapper">
 			<div class="content">
 				<span id="greet">Hi i'm</span>
-				<span id="name">Rivaldo Suryadi</span>
+				<span id="name">Lorem Ipsum</span>
 				<div id="desc">
-					<span>I'm currently studying at Esa Unggul University,
-						focusing on full-stack web development as my area of interest.
+					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eum consequuntur maiores. Nihil
+						deleniti ut natus illo.
 					</span>
 				</div>
 				<img id="handIcon" src="../assets/handIcon.svg" alt="handIcon">
 			</div>
 			<div class="img-wrapper">
-				<img src="../assets/Computer.svg" alt="ComputerImage">
+				<img src="../assets/coverImage.svg" alt="ComputerImage">
 			</div>
 		</div>
 		<div class="curve-bottom">
@@ -29,7 +29,7 @@
 <script setup>
 const color = {
 	background: "#b2c1c2",
-	background_next: "#f3f3f3",
+	background_next: "#f1f6f6",
 	background_desc: "#929e9fbe",
 	font_greet: "#647080",
 	font_name: "#647080",
@@ -39,7 +39,7 @@ const color = {
 
 <style scoped>
 .cover {
-	background-color: v-bind('color.background') ;
+	background-color: v-bind('color.background');
 	padding-top: 10px;
 	padding-bottom: 10px;
 	min-height: 460px;
@@ -78,13 +78,14 @@ const color = {
 	font-weight: 600;
 	font-size: 3rem;
 	text-transform: uppercase;
-
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0.085);
 	background-image:
 		linear-gradient(-225deg,
-			#ffffff91 0%,
-			#5c7979a8 29%,
-			#c5eedea4 67%,
-			#fcfad3a2 100%);
+			#ffffff64 0%,
+			#8ce2dd91 29%,
+			#6ea6c991 67%,
+			#fff0f091 100%);
 	background-size: auto auto;
 	background-clip: border-box;
 	background-size: 200% auto;
@@ -154,14 +155,13 @@ const color = {
 	transition: rotate 100ms;
 }
 
-#handIcon:hover{
+#handIcon:hover {
 	rotate: -35deg;
 }
 
 .img-wrapper img {
-	max-height: 400px;
-	min-height: 250px;
-	height: 23vw;
+	max-height: 200px;
+	height: 37vw;
 	width: auto;
 
 	position: relative;
@@ -193,7 +193,7 @@ const color = {
 }
 
 
-@media (max-width: 970px) {
+@media (max-width: 1024px) {
 	.cover-wrapper {
 		flex-direction: column;
 		gap: 30px;
@@ -201,16 +201,13 @@ const color = {
 
 	.img-wrapper img {
 		position: static;
+		min-height: 120px;
 	}
 }
 
 
 @media (max-width: 493px),
 (max-height: 600px) {
-	.img-wrapper img {
-		min-height: 200px;
-	}
-
 	#name {
 		display: block;
 		letter-spacing: -1px;

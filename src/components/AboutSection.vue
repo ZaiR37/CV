@@ -1,5 +1,5 @@
 <template>
-	<div class="about-section">
+	<div id="About" class="about-section">
 		<div class="my-profile">
 			<div class="title-container">
 				<span id="title">ABOUT ME</span>
@@ -36,7 +36,7 @@
 <script setup>
 const mySkill = {
 	frontend: ['Vue', 'Laravel', 'Vanilla Css','Bootstrap' ],
-	backend: ['Javascript', 'NodeJs', 'Express', 'Lumen', 'MySQL', 'MongoDB'],
+	backend: ['Javascript', 'NodeJs', 'Express', 'Lumen', 'NGINX', 'MySQL', 'MongoDB'],
 	tools: ['VSCode','Git', 'Docker', 'Figma'],
 }
 
@@ -45,7 +45,7 @@ const color = {
 	background_title: "#cbd5d6",
 	background_desc: "#d8e0e0",
 	font_title: "#8699b1",
-	font_desc: "#8699b1",
+	font_desc: "#748395",
 	font_skill: "#868686",
 };
 </script>
@@ -58,8 +58,8 @@ const color = {
 .about-section {
 	width: min(80%, 900px);
 	margin: auto;
-	padding-top: 10dvh;
-	padding-bottom: 10dvh;
+	padding-top: 15dvh;
+	padding-bottom: 20dvh;
 }
 
 /*=========== My-profile ===========*/
@@ -67,7 +67,7 @@ const color = {
 .skillTitle-container {
 	user-select: none;
 	color: v-bind('color.font_title');
-	box-shadow: 0px 10px v-bind('color.background_title');
+	box-shadow: 0px 10px v-bind('color.background_title') ;
 	background-color: v-bind('color.background_title');
 	font-size: 2rem;
 	font-weight: 600;
