@@ -136,9 +136,17 @@ const projects = [
 ]
 const color = {
 	projectContainer: '#d8e0e0',
+	projectContainer_border: '#ffffff',
 	title_background: '#d8e0e0',
 	project_wrapper: '#e5eeee',
-	swiper_slide: '#fff'
+	swiper_slide: '#fff',
+	source: '#7e7e7e',
+	source_hover: '#999999',
+	source_active: '#afafaf',
+	showMore: '#858585',
+	showMore_hover:'#a1a1a1',
+	showMore_textShadow: '#b5cbea',
+	showMore_background:'#ffffff65'
 }
 
 function ShowMore(index) {
@@ -356,28 +364,28 @@ function HideMore() {
 }
 
 a {
-	color: #7e7e7e;
+	color: v-bind('color.source');
 	font-weight: 600;
 	font-size: 1.3rem;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #999999;
+	color: v-bind('color.source_hover');
 }
 
 a:active {
-	color: #afafaf;
+	color: v-bind('color.source_active');
 }
 
 /*=========== Hide & Show Button ===========*/
 .showMore {
-	background: linear-gradient(to bottom, transparent, #b6b5b565);
+	background: linear-gradient(to bottom, transparent, v-bind('color.showMore_background'));
 	display: block;
 	background-color: transparent;
 	border: none;
 	border-radius: 50%;
-	color: #858585;
+	color: v-bind('color.showMore');
 	font-size: 1.2rem;
 	font-weight: 600;
 	text-align: center;
@@ -386,8 +394,8 @@ a:active {
 }
 
 .showMore:hover {
-	text-shadow: 0px 2px 2px #b5cbea;
-	color: #a1a1a1;
+	text-shadow: 0px 2px 2px v-bind('color.showMore_textShadow');
+	color: v-bind('color.showMore_hover');
 }
 
 /*=========== Transition ===========*/

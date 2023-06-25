@@ -39,7 +39,7 @@ const color = {
 
 <style scoped>
 .cover {
-	background-color: v-bind('color.background');
+	background-color: v-bind('color.background') ;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	min-height: 460px;
@@ -155,7 +155,7 @@ const color = {
 	transition: rotate 100ms;
 }
 
-#handIcon:hover {
+#handIcon:hover{
 	rotate: -35deg;
 }
 
